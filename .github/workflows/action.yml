@@ -17,18 +17,17 @@ jobs:
       
       - name: Install requestes
         run: pip install requests
-        
+
       - name: Get paper
         run: python ./bing.py
       
       - name: Commit
-        run:
-          git config --global user.email ${{secrets.MAIL_USERNAME}}
-          git config --global user.name ${{secrets.USERNAME}}
-          git add .
-          git commit -m "update" -a
-      
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: github-actions-x/commit@v2.7
         with:
-          github_token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          push-branch: 'main'
+          commit-message: 'today paper'
+          force-add: 'true'
+          files: papers/*
+          name: ${{secrets.USERNAME}}
+          email: ${{secrets.MAIL_USERNAME}}
