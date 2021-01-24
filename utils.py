@@ -12,6 +12,7 @@ def set_headers(**kw):
 
 
 def fetch(url, headers=None, data=None):
+    # print(url)
     headers = set_headers() if headers is None else headers
     try:
         resp = requests.get(url, headers=headers, data=data)
