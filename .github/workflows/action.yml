@@ -13,7 +13,7 @@ jobs:
           python-version: 3.6
       
       - name: Get paper
-        run: python bing.py
+        run: python ./bing.py
       
       - name: Commit
         run:
