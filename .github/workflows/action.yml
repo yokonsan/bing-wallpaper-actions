@@ -1,0 +1,28 @@
+name: 'Bing Paper'
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.6
+      
+      - name: Get paper
+        run: python bing.py
+      
+      - name: Commit
+        run:
+          git config --global user.email ${{secrets.MAIL_USERNAME}}
+          git config --global user.name ${{USERNAME}}
+          git add .
+          git commit -m "update" -a
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
