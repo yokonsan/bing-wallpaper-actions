@@ -30,10 +30,10 @@ jobs:
         run: |
           git config --global user.email ${{secrets.MAIL_USERNAME}}
           git config --global user.name ${{secrets.USERNAME}}
-          git add .
           git commit -m "update" -a
           
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'main'
