@@ -28,8 +28,8 @@ jobs:
       
       - name: Commit
         run: |
-          git config --local user.email "${{secrets.MAIL_USERNAME}}"
-          git config --local user.name "${{secrets.USERNAME}}"
+          git config --local user.email "15152347277@163.com"
+          git config --local user.name "Blackyukun"
           git commit -m "update" -a
           
       - name: Push changes
