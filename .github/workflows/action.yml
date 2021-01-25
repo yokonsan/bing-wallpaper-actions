@@ -27,12 +27,13 @@ jobs:
         run: python ./bing.py
       
       - name: Commit
-        uses: github-actions-x/commit@v2.7
+        run: |
+          git config --global user.email ${{secrets.MAIL_USERNAME}}
+          git config --global user.name ${{secrets.USERNAME}}
+          git add .
+          git commit -m "update" -a
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          push-branch: 'main'
-          commit-message: 'today paper'
-          force-add: 'true'
-          files: papers/
-          name: ${{secrets.USERNAME}}
-          email: ${{secrets.MAIL_USERNAME}}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
