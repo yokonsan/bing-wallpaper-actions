@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 21 * * *'
+    - cron: '0 15 * * *'
 
 jobs:
   build:
@@ -33,6 +33,6 @@ jobs:
           push-branch: 'main'
           commit-message: 'today paper'
           force-add: 'true'
-          files: papers/*
+          files: papers/
           name: ${{secrets.USERNAME}}
           email: ${{secrets.MAIL_USERNAME}}
