@@ -5,10 +5,10 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 15 * * *'
+    - cron: '0 22 * * *'
 
 jobs:
-  build:
+  bing-paper:
     runs-on: ubuntu-latest
 
     steps:
