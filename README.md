@@ -1,2 +1,3 @@
-# github-actions-demo
-github-actions-demo
+# Bing wallpaper actions
+
+Today's wallpaper.

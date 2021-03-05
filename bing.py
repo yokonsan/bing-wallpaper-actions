@@ -14,7 +14,7 @@ def get_img_url():
         data = response.json()
         try:
             img_url = data['images'][0]['url']
-            return 'https://cn.bing.com' + img_url
+            return config.BING_HOST + img_url
         except KeyError:
             logging.warn('parse error...')
             return None
