@@ -26,7 +26,7 @@ jobs:
       - name: Get paper
         run: python ./bing.py
 
-      - name: Update readme
+      - name: Update readMe
         run: python ./update.py
       
       - name: Commit
