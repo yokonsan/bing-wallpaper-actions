@@ -15,10 +15,10 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
 
-      - name: Set up Python 3.6
+      - name: Set up Python 3.10.9
         uses: actions/setup-python@v1
         with:
-          python-version: 3.6
+          python-version: 3.10.9
       
       - name: Install requestes
         run: pip install requests
@@ -32,7 +32,7 @@ jobs:
       - name: Commit
         run: |
           git config --local user.email "15152347277@163.com"
-          git config --local user.name "Blackyukun"
+          git config --local user.name "yokon"
           git add .
           git commit -m "update" -a
           
