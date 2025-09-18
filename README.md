@@ -2,6 +2,6 @@
 
 Today's wallpaper.
 
-![20250917.jpg](papers/20250917.jpg)
+![20250918.jpg](papers/20250918.jpg)
 
 Enjoy it.
